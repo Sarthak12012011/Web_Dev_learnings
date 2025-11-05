@@ -12,19 +12,38 @@
             const randomIndex = Math.floor(Math.random() * choices.length);
             return choices[randomIndex];
         }
-        user = prompt("Enter rock, paper, or scissors:").toLowerCase();
-        computer = getComputerChoice();
-        if (user === computer) {
-            alert("It's a tie! Both chose " + user + ".");
-        } else if (
-            (user === 'rock' && computer === 'scissors') ||
-            (user === 'paper' && computer === 'rock') ||
-            (user === 'scissors' && computer === 'paper')
-        ) {
-            alert("You win! " + user + " beats " + computer + ".");
-        } else {
-            alert("You lose! " + computer + " beats " + user + ".");
+        function getUserChoice() {
+            let userInput = prompt("Enter rock, paper, or scissors:").toLowerCase();
+            while (!['rock', 'paper', 'scissors'].includes(userInput)) {
+                userInput = prompt("Invalid choice. Please enter rock, paper, or scissors:").toLowerCase();
+            }
+            return userInput;
         }
+        let playerScore = 0;
+        let computerScore = 0;
+        function playGame() {
+            const user = getUserChoice();
+            const computer = getComputerChoice();
+            if (user === computer) {
+                alert("It's a tie! Both chose " + user + ".");
+                playerScore += 0;
+                computerScore += 0;
+            } else if (
+                (user === 'rock' && computer === 'scissors') ||
+                (user === 'paper' && computer === 'rock') ||
+                (user === 'scissors' && computer === 'paper')
+            ) {
+                alert("You win! " + user + " beats " + computer + ".");
+                playerScore += 1;
+            } else {
+                alert("You lose! " + computer + " beats " + user + ".");
+                computerScore += 1;
+            }
+        }
+        for (let round = 1; round <= 5; round++) {
+            playGame();
+        }
+        alert("Final Scores:\nPlayer: " + playerScore + "\nComputer: " + computerScore);
     </script>
 </body>
 </html>

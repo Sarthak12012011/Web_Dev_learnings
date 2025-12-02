@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: black;
+    height: 1500px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(0, 11, 19);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+nav .left{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+nav ul li select{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 30px;
+    width: 48px;
+}
+nav ul li button.join{
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 35px;
+    width: 100px;
+}
+nav ul li button.join:hover{
+    background-color: #007acc;
+    transition: 0.3s ease-in-out;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 0 50px;
+}
+.hero .txt{
+    max-width: 600px;
+    align-self:first flex-start;
+    margin-top: 80px;
+}
+.hero .img img {
+    object-fit: cover;
+
+    /* fade left + right */
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
+}
+
+.hero .txt h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.hero .txt p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#Sign{
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 45px;
+    width: 200px;
+}
+#Sign:hover{
+    background-color: #e6e6e6;
+    color: rgb(82, 81, 81);
+    height: 50px;
+    width: 210px;
+    transition: 0.3s ease-in-out;
+}
+#rent-now{
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 45px;
+    width: 120px;
+}
+#rent-now:hover{
+    background-color: #e6e6e6;
+    color: rgb(82, 81, 81);
+    height: 50px;
+    width: 130px;
+    transition: 0.3s ease-in-out;
+}
+main{
+    height: 500px;
+    background-color:rgb(0, 11, 19);
+}
+.fav{
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px
+
+}
+.fav .text{
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+.fav h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.fav p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.grid{
+    max-width:600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.grid img{
+    max-width: 150px;
+    height: auto;
+    border-radius: 20px;
+    padding: 2px
+}
+footer{
+    background-color: rgb(44, 41, 41);
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .amazon{
+    margin-bottom: 5px;
+}
+footer .privacy{
+    margin-bottom: 10px;
+}
+footer .privacy a{
+    color: rgb(124, 161, 240);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+footer .privacy a:hover{
+    color:rgb(0, 204, 255);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+footer .copyright{
+    font-size: 12px;
+    color: rgb(165, 143, 143);
+}
+
+@media only screen and (max-width:455px){
+    /* media queries to be added */
+}
